@@ -44,7 +44,7 @@
             <div class="form-group">
                 <label for="phone">Телефон</label>
                 <input type="tel" id="phone" name="phone" placeholder="+7..."
-                    value="<?php echo htmlspecialchars($values['phone']); ?>">
+                    value="<?php echo htmlspecialchars($values['number']); ?>">
             </div>
 
             <div class="form-group">
