@@ -43,8 +43,8 @@
 
             <div class="form-group">
                 <label for="bdate">Дата рождения</label>
-                <input type="date" id="bdate" name="bdate" placeholder="bday"
-                    value="<?php echo htmlspecialchars($values['bday'])?>">
+                <input type="date" id="bdate" name="bdate" 
+                    value="<?php echo htmlspecialchars($values['bdate']); ?>">
             </div>
 
             <div class="form-group">
