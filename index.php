@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
     // Значения полей
     $values = array();
-    $all_fields = ['fullName', 'email', 'phone', 'bdate', 'gender', 'bio', 'privacy'];
+    $all_fields = ['fullName', 'email', 'number', 'bdate', 'gender', 'bio', 'privacy'];
     foreach ($all_fields as $f) {
         $values[$f] = empty($_COOKIE[$f . '_value']) ? '' : $_COOKIE[$f . '_value'];
     }
@@ -77,7 +77,7 @@ else {
     }
 
     // Сохраняем остальные (необязательные) поля
-    setcookie('phone_value', $_POST['phone'], time() + 30 * 24 * 3600);
+    setcookie('number_value', $_POST['number'], time() + 30 * 24 * 3600);
     setcookie('bdate_value', $_POST['bdate'], time() + 30 * 24 * 3600);
     setcookie('gender_value', $_POST['gender'], time() + 30 * 24 * 3600);
     setcookie('privacy_value', $_POST['privacy'], time() + 30 * 24 * 3600);
@@ -93,8 +93,8 @@ else {
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
         ]);
 
-        $stmt = $db->prepare("INSERT INTO application (name, email, phone, bday, sex, bio) VALUES (?, ?, ?, ?, ?, ?)");
-        $stmt->execute([$_POST['fullName'], $_POST['email'], $_POST['phone'], $_POST['bdate'], $_POST['gender'], $_POST['bio']]);
+        $stmt = $db->prepare("INSERT INTO application (name, email, number, bday, sex, bio) VALUES (?, ?, ?, ?, ?, ?)");
+        $stmt->execute([$_POST['fullName'], $_POST['email'], $_POST['number'], $_POST['bdate'], $_POST['gender'], $_POST['bio']]);
 
         $id = $db->lastInsertId();
         $stmt_l = $db->prepare("INSERT INTO application_languages (application_id, language_id) VALUES (?, ?)");
