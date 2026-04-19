@@ -25,37 +25,37 @@
                 <label for="fullName" class="required">ФИО</label>
                 <input type="text" id="fullName" name="fullName"  placeholder="Введите ваше полное имя"
                     class="<?php echo $errors['fullName'] ? 'field-error' : ''; ?>"
-                    value="<?php echo htmlspecialchars($values['fullName']); ?>">>
+                    value="<?php echo htmlspecialchars($values['fullName']); ?>">
                 </div>
 
             <div class="form-group">
                 <label for="email" class="required">Email</label>
                 <input type="email" id="email" name="email"  placeholder="example@domain.com"
                     class="<?php echo $errors['email'] ? 'field-error' : ''; ?>"
-                    value="<?php echo htmlspecialchars($values['email']); ?>">>
+                    value="<?php echo htmlspecialchars($values['email']); ?>">
             </div>
 
             <div class="form-group">
                 <label for="phone">Телефон</label>
                 <input type="tel" id="phone" name="phone" placeholder="+7 (XXX) XXX-XX-XX"
-                    value="<?php echo htmlspecialchars($values['phone']); ?>">>
+                    value="<?php echo htmlspecialchars($values['phone']); ?>">
             </div>
 
             <div class="form-group">
                 <label for="bdate">Дата рождения</label>
                 <input type="date" id="bdate" name="bdate" placeholder="bday"
-                    value="<?php echo htmlspecialchars($values['bday'])?>">>
+                    value="<?php echo htmlspecialchars($values['bday'])?>">
             </div>
 
             <div class="form-group">
                 <label>Пол</label>
                 <div>
                     <input type="radio" id="gender-male" name="gender" value="male"
-                    <?php echo $values['gender'] == 'male' ? 'checked' : ''; ?>>>
+                    <?php echo $values['gender'] == 'male' ? 'checked' : ''; ?>>
                     <label for="gender-male">Мужской</label>
                     
                     <input type="radio" id="gender-female" name="gender" value="female"
-                    <?php echo $values['gender'] == 'female' ? 'checked' : ''; ?>>>
+                    <?php echo $values['gender'] == 'female' ? 'checked' : ''; ?>>
                     <label for="gender-female">Женский</label>
                 </div>
             </div>
@@ -85,12 +85,12 @@
                 <label for="bio" class="required">Биография</label>
                 <textarea id="bio" name="bio"  placeholder="Опишите вас..." class="
                 <?php echo $errors['bio'] ? 'field-error' : ''; ?>">
-                <?php echo htmlspecialchars($values['bio']); ?>></textarea>
+                <?php echo htmlspecialchars($values['bio']); ?></textarea>
             </div>
 
             <div class="checkbox-container">
                 <input type="checkbox" id="privacy" name="privacy" value = "ok"
-                <?php echo !empty($values['privacy']) ? 'checked' : ''; ?>>
+                <?php echo !empty($values['privacy']) ? 'checked' : ''; ?>
                 <label for="privacy">
                     С контрактом ознакомлен.
                 </label>
