@@ -42,10 +42,11 @@
             </div>
 
             <div class="form-group">
-                <label for="phone">Телефон</label>
-                <input type="tel" id="phone" name="phone" placeholder="+7..."
-                    value="<?php echo htmlspecialchars($values['number']); ?>">
-            </div>
+    <label for="number">Телефон</label>
+    <input type="tel" id="number" name="number" 
+        placeholder="+7 (XXX) XXX-XX-XX"
+        value="<?php echo htmlspecialchars($values['number']); ?>">
+</div>
 
             <div class="form-group">
                 <label for="bdate">Дата рождения</label>
