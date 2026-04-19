@@ -73,12 +73,14 @@
                     class="<?php echo $errors['languages'] ? 'field-error' : ''; ?>">
                     <?php
                     $langs = [
-                        'pascal' => 'Pascal',
-                        'c' => 'C',
-                        'cpp' => 'C++',
-                        'js' => 'JavaScript',
-                        'php' => 'PHP',
-                        'python' => 'Python'
+                        '1a0caebb-268b-11f1-a59b-bc241103b411' => 'Pascal',
+                        '1a0cb9c9-268b-11f1-a59b-bc241103b411"' => 'C',
+                        '1a0cbde6-268b-11f1-a59b-bc241103b411' => 'C++',
+                        '1a0cbf43-268b-11f1-a59b-bc241103b411' => 'JavaScript',
+                        '1a0cc059-268b-11f1-a59b-bc241103b411' => 'PHP',
+                        '1a0cc194-268b-11f1-a59b-bc241103b411' => 'Python'
+                        '1a0cc290-268b-11f1-a59b-bc241103b411' => 'Java'
+                        '1a0cc367-268b-11f1-a59b-bc241103b411' => 'Haskell'
                     ];
                     foreach ($langs as $key => $label) {
                         $selected = in_array($key, $values['languages']) ? 'selected' : '';
